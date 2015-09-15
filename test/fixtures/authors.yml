@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+rand:
+  first_name: Ayn
+  last_name: Rand
+  year_born: 1905
+
+benchley:
+  first_name: Peter
+  last_name: Benchley
+  year_born: 1940
