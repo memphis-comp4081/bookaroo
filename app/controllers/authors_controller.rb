@@ -5,4 +5,10 @@ class AuthorsController < ApplicationController
     # Automagically render authors/index.html.erb
   end
 
+  def destroy
+    @author = Author.find(params[:id])
+    @author.destroy
+    redirect_to authors_url
+  end
+
 end

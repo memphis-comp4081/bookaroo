@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'static_pages/welcome'
 
   get 'authors/index', to: 'authors#index', as: 'authors'
+  delete 'authors/:id', to: 'authors#destroy', as: 'author'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

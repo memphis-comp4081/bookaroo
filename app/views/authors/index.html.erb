@@ -7,6 +7,7 @@
   <th>First Name</th>
   <th>Last Name</th>
   <th>Year Born</th>
+  <th>Action</th>
 </tr>
 
 <% @authors.each do |author| %>
@@ -14,6 +15,7 @@
 <td><%= author.first_name %></td>
 <td><%= author.last_name %></td>
 <td><%= author.year_born %></td>
+<td>[<%= link_to "delete", author_path(author), method: :delete %>]</td>
 </tr>
 <% end %>
 
