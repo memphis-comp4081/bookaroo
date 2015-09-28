@@ -3,15 +3,16 @@ Rails.application.routes.draw do
   get 'static_pages/welcome'
 
   get 'authors', to: 'authors#index', as: 'authors'
-
   get 'authors/new', to: 'authors#new', as: 'new_author'
   post 'authors', to: 'authors#create'
-
   get 'authors/:id/edit', to: 'authors#edit', as: 'edit_author'
   patch '/authors/:id', to: 'authors#update'
   put '/authors/:id', to: 'authors#update'
-
   delete 'authors/:id', to: 'authors#destroy', as: 'author'
+
+  get 'books', to: 'books#index', as: 'books'
+  get 'books/new', to: 'books#new', as: 'new_book'
+  post 'books', to: 'books#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

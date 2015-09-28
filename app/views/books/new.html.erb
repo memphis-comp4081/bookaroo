@@ -1,0 +1,32 @@
+
+<h1>Create Book</h1>
+
+<%= form_for(@book) do |f| %>
+
+<p>
+<%= f.label :title %>: 
+<%= f.text_field :title %>
+</p>
+
+<p>
+  <%= f.label 'Author:' %>
+  <%= f.collection_select(:author_id,
+                          @authors,
+                          :id,
+                          :full_name) %>
+</p>
+
+<p>
+<%= f.label :year_published %>:
+<%= f.text_field :year_published %>
+</p>
+
+<p>
+<%= f.label :summary %>:<br>
+<%= f.text_area :summary, size: "60x20" %>
+</p>
+
+<p>
+<%= f.submit %>
+</p>
+<% end %>
