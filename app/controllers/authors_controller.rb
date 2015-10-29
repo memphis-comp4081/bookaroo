@@ -1,5 +1,7 @@
 class AuthorsController < ApplicationController
 
+  before_action :authenticate_user! #, except: [:index, :new]
+
   def index
     @authors = Author.all
     # Automagically render authors/index.html.erb

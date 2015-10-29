@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  root to: 'authors#index'
+
+  devise_for :users
+  
   get 'static_pages/welcome'
 
   get 'authors', to: 'authors#index', as: 'authors'
